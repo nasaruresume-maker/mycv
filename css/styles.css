@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap -Nasaru Resume v2.0.2 (https://startbootstrap.com/theme/resume)
+* Start Bootstrap -Nasaru Resume v2.0.3 (https://startbootstrap.com/theme/resume)
 * Copyright 2026 May 18 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
@@ -11613,6 +11613,38 @@ h1 {
     }
     .prev { left: 10px; }
     .next { right: 10px; }
+
+
+    /* REAL FIX FOR MOBILE SPACING */
+@media (max-width: 768px) {
+
+  /* Target your actual section */
+  .gallery {
+    padding: 20px 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Fix slider overflow */
+  .gallery-track {
+    gap: 10px !important;
+  }
+
+  /* Override desktop width */
+  .gallery-item {
+    min-width: 85vw !important;
+    height: auto !important;
+    padding: 5px !important;
+  }
+
+  .gallery-item img {
+    height: auto !important;
+  }
+
+  /* Prevent hidden overflow from stretching section */
+  .gallery-track-container {
+    overflow: hidden !important;
+  }
+}
     
     /* ====================
          Lightbox Popup
