@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
+* Start Bootstrap -Nasaru Resume v2.0.1 (https://startbootstrap.com/theme/resume)
+* Copyright 2026 May 18 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
 /*!
@@ -11629,4 +11629,95 @@ h1 {
     .lightbox-active .gallery {
       display: none;
     }
+
+/*-----------------------------/* Nabbar resposibe Section *-----------------------------*/
+ /* ==========================================
+   MOBILE NAVBAR TOGGLER FIX
+   ========================================== */
+@media (max-width: 991.98px) {
+
+  /* Navbar container */
+  #sideNav {
+    padding: 0.5rem 1rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Hamburger button */
+  #sideNav .navbar-toggler {
+    padding: 0.35rem 0.6rem;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0.375rem;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Hamburger icon size */
+  #sideNav .navbar-toggler-icon {
+    width: 1.2em;
+    height: 1.2em;
+    background-size: 100%;
+  }
+
+  /* Brand section (image + name) */
+  #sideNav .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 0;
+    max-width: calc(100% - 60px);
+  }
+
+  /* Mobile profile image */
+  #sideNav .navbar-brand::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-image: url("../assets/img/Nasarudheesha pic.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+  }
+
+  /* Mobile name text */
+  #sideNav .navbar-brand .d-block.d-lg-none {
+    display: block !important;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide desktop image on mobile */
+  #sideNav .navbar-brand .d-none.d-lg-block {
+    display: none !important;
+  }
+
+  /* Dropdown menu spacing */
+  #sideNav .navbar-collapse {
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Main content fits screen */
+  .container-fluid,
+  section.resume-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
 

@@ -1,0 +1,281 @@
+
+/* ==========================================
+   Responsive Resume Enhancements
+   Add after your existing styles.css
+   ========================================== */
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Long technical text should wrap */
+.resume-section-content,
+.contact-info,
+.subheading,
+p,
+li,
+h1, h2, h3 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Main heading */
+#about h1 {
+    font-size: clamp(2.2rem, 7vw, 6rem);
+    line-height: 1.1;
+}
+
+/* Contact information */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.social-icon {
+    flex: 0 0 auto;
+}
+
+/* Reusable button */
+.responsive-btn {
+    display: inline-block;
+    background: #bd5d38;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    text-align: center;
+    max-width: 100%;
+}
+
+.responsive-btn:hover {
+    background: #9c4c2f;
+    color: #fff;
+}
+
+/* Skills icon grid */
+.dev-icons,
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 0;
+}
+
+/* Certificate gallery */
+.gallery-track-container {
+    width: 100% !important;
+    overflow: hidden;
+}
+
+.gallery-item {
+    min-width: calc(33.333% - 14px);
+    height: auto !important;
+    aspect-ratio: 3 / 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lightbox image */
+.lightbox img {
+    max-width: 95%;
+    max-height: 85vh;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 56px;
+    }
+
+    .resume-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .gallery-item {
+        min-width: calc(50% - 10px);
+    }
+
+    .skill-icon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .resume-section {
+        padding: 2.5rem 1rem;
+    }
+
+    #about h1 {
+        text-align: center;
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .d-flex.flex-column.flex-md-row.justify-content-between {
+        gap: 0.75rem;
+    }
+
+    .flex-shrink-0 {
+        margin-top: 0.25rem;
+    }
+
+    .gallery-item {
+        min-width: 100%;
+    }
+
+    .nav-btn {
+        padding: 10px 14px;
+        font-size: 20px;
+    }
+
+    .prev-lightbox,
+    .next-lightbox {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    .responsive-btn {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .skill-icon {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .dev-icons .d-none.d-lg-block,
+    .skill-icons .d-none.d-lg-block {
+        display: block !important;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 479.98px) {
+    .resume-section {
+        padding: 2rem 0.75rem;
+    }
+
+    #about h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info {
+        font-size: 0.95rem;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .close {
+        top: 15px;
+        right: 20px;
+        font-size: 32px;
+    }
+}
+
+
+/* ==========================================
+   COMPACT MOBILE HAMBURGER BUTTON
+   ========================================== */
+@media (max-width: 991.98px) {
+
+    /* Navbar height */
+    #sideNav {
+        min-height: 70px !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    /* Smaller hamburger button */
+    #sideNav .navbar-toggler {
+        padding: 0.20rem 0.45rem !important;
+        font-size: 0.85rem !important;
+        line-height: 1 !important;
+        border-width: 1px !important;
+        border-radius: 4px !important;
+        margin-left: auto !important;
+        width: 38px !important;
+        height: 34px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    /* Smaller hamburger icon */
+    #sideNav .navbar-toggler-icon {
+        width: 18px !important;
+        height: 18px !important;
+        background-size: 18px 18px !important;
+    }
+
+    /* Brand section width */
+    #sideNav .navbar-brand {
+        max-width: calc(100% - 50px) !important;
+        margin-right: 0 !important;
+    }
+
+    /* Prevent page overflow */
+    body,
+    html {
+        overflow-x: hidden !important;
+    }
+
+    .resume-section,
+    .container-fluid {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
