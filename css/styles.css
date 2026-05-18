@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap -Nasaru Resume v2.0.1 (https://startbootstrap.com/theme/resume)
+* Start Bootstrap -Nasaru Resume v2.0.2 (https://startbootstrap.com/theme/resume)
 * Copyright 2026 May 18 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
@@ -11557,6 +11557,46 @@ h1 {
       cursor: pointer;
       border-radius: 4px;
     }
+
+
+/*added for gallery and other section too large after mobile */
+/* Fix large space on mobile */
+.gallery-section {
+  padding: 40px 0;
+}
+
+.gallery-track-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-track {
+  gap: 12px;
+}
+
+/* Responsive slider items */
+.gallery-item {
+  min-width: 80vw; /* take 80% of screen width */
+  height: 160px;
+}
+
+/* Even smaller phones */
+@media (max-width: 400px) {
+  .gallery-item {
+    min-width: 85vw;
+    height: 150px;
+  }
+}
+
+/* Remove unwanted bottom space */
+.gallery-section,
+.gallery-wrapper,
+.gallery-track-container {
+  overflow: hidden;
+}
+
+
+
     .prev,
     .next {
       position: absolute;
