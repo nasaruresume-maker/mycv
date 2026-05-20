@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap -Nasaru Resume v2.0.3 (https://startbootstrap.com/theme/resume)
+* Start Bootstrap -Nasaru Resume v2.0.4 (https://startbootstrap.com/theme/resume)
 * Copyright 2026 May 18 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
@@ -11615,37 +11615,7 @@ h1 {
     .next { right: 10px; }
 
 
-    /* REAL FIX FOR MOBILE SPACING */
-@media (max-width: 768px) {
 
-  /* Target your actual section */
-  .gallery {
-    padding: 20px 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Fix slider overflow */
-  .gallery-track {
-    gap: 10px !important;
-  }
-
-  /* Override desktop width */
-  .gallery-item {
-    min-width: 85vw !important;
-    height: auto !important;
-    padding: 5px !important;
-  }
-
-  .gallery-item img {
-    height: auto !important;
-  }
-
-  /* Prevent hidden overflow from stretching section */
-  .gallery-track-container {
-    overflow: hidden !important;
-  }
-}
-    
     /* ====================
          Lightbox Popup
     ==================== */
@@ -11793,3 +11763,47 @@ h1 {
   }
 }
 
+
+
+/* REAL FIX FOR MOBILE PORTRAIT OVERFLOW */
+@media (max-width: 768px) {
+
+  /* Remove desktop width restriction */
+  .gallery {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 20px 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Force slider to shrink */
+  .gallery-track {
+    gap: 10px !important;
+    overflow: hidden !important;
+  }
+
+  /* Override desktop 3‑column rule */
+  .gallery-item {
+    min-width: 85vw !important;
+    height: auto !important;
+    padding: 5px !important;
+  }
+
+  .gallery-item img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Prevent container overflow */
+  .gallery-track-container {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Prevent body from stretching */
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+/*----Ver 2.4.0  Fix for mobile portrait overflow in gallery section----*/
