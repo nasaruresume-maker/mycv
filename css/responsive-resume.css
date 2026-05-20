@@ -3,11 +3,10 @@
    Responsive Resume Enhancements
    Add after your existing styles.css
    ========================================== */
-
+/*--ver 2.6.0---*/
 /* Prevent horizontal scrolling */
 html, body {
     overflow-x: hidden;
-    max-width: 100%;
 }
 
 /* Images responsive by default */
@@ -120,7 +119,8 @@ h1, h2, h3 {
     }
 
     .gallery-item {
-        min-width: calc(50% - 10px);
+        min-width: 85vw;
+
     }
 
     .skill-icon {
